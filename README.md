@@ -1,3 +1,2 @@
-# hello-world
-1st repo
+this is another test...
 hello, i am blindly following instruction.
