@@ -19,7 +19,8 @@ FOO=BAR'''
         stage('stage1b') {
           steps {
             sh '''#!/bin/bash
-echo "this is stage oneB"'''
+echo "this is stage oneB"
+echo "FOO = ${FOO}"'''
           }
         }
       }
