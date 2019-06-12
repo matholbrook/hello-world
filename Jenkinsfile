@@ -25,5 +25,11 @@ echo "FOO = ${FOO}"'''
         }
       }
     }
+    stage('stage2') {
+      steps {
+        sh '''#!/bin/bash
+echo "this is stage2"'''
+      }
+    }
   }
 }
