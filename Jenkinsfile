@@ -12,7 +12,8 @@ pipeline {
           agent any
           steps {
             sh '''#!/bin/bash
-echo "this is stage one"'''
+echo "this is stage one"
+FOO=BAR'''
           }
         }
         stage('stage1b') {
