@@ -7,10 +7,20 @@ pipeline {
   }
   stages {
     stage('stage1') {
-      agent any
-      steps {
-        sh '''#!/bin/bash
+      parallel {
+        stage('stage1') {
+          agent any
+          steps {
+            sh '''#!/bin/bash
 echo "this is stage one"'''
+          }
+        }
+        stage('stage1b') {
+          steps {
+            sh '''#!/bin/bash
+echo "this is stage oneB"'''
+          }
+        }
       }
     }
   }
