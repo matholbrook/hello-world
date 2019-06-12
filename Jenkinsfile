@@ -7,6 +7,7 @@ pipeline {
   }
   stages {
     stage('stage1') {
+      agent any
       steps {
         sh '''#!/bin/bash
 echo "this is stage one"'''
